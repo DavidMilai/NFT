@@ -1,11 +1,11 @@
 
-const hre = require("hardhat");
 
+const {ethers} = require("hardhat");
 
 async function main() {
 
     //find the contract to be deployed
-    const contract = await hre.ethers.getContractFactory("NFT");
+    const contract = await ethers.getContractFactory("NFT");
     
     //deploy contract
     const deployedContract = await contract.deploy();
@@ -22,3 +22,6 @@ main()
     console.error(error);
     process.exit(1);
   });
+
+
+  //0xFa77d18Cc5c2FE2c2aE6Cc770d8Ce249d08250C2
